@@ -1,0 +1,19 @@
+{
+  "name": "shufflefy",
+  "version": "0.1.0",
+  "description": "To shuffle an Array.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imp8468/shufflefy.git"
+  },
+  "author": "imp8468",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imp8468/shufflefy/issues"
+  },
+  "homepage": "https://github.com/imp8468/shufflefy#readme"
+}
