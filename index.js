@@ -1,4 +1,4 @@
-function shufflefy(inputArr, iteration, starting_seed, randomnizer){
+function shufflefy(inputArr, iteration, starting_seed, randomizer){
 	const SHUFFLEFY_DEFALT_ITERATION = 1;
 	const SHUFFLEFY_DEFALT_RANDOMIZER = () => {
 		if(typeof(seed) !== "number" || !seed)
@@ -24,9 +24,9 @@ function shufflefy(inputArr, iteration, starting_seed, randomnizer){
 		iteration = SHUFFLEFY_DEFALT_ITERATION;
 	}
 
-	if(typeof(randomnizer) !== "function" || typeof(randomnizer()) !== "number")
+	if(typeof(randomizer) !== "function" || typeof(randomizer()) !== "number")
 	{
-		randomnizer = SHUFFLEFY_DEFALT_RANDOMIZER;
+		randomizer = SHUFFLEFY_DEFALT_RANDOMIZER;
 	}
 
 
@@ -34,7 +34,7 @@ function shufflefy(inputArr, iteration, starting_seed, randomnizer){
 	{	
 		outputArr=[];
 		inputArr.forEach((obj) => {
-			outputArr.splice(Math.round(randomnizer() * outputArr.length), 0, obj);
+			outputArr.splice(Math.round(randomizer() * outputArr.length), 0, obj);
 		});
 		inputArr = outputArr;
 	}
