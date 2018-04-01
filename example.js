@@ -13,7 +13,7 @@ console.log(shufflefy(mixedArr));
 console.log("\nshuffle 10 times");
 console.log(shufflefy(numberArr, 10));
 
-console.log("\nshuffle 10 times, starting seed 20. Result always: [3, 7, 4, 5, 6, 2, 1]");
+console.log("\nshuffle 10 times, starting seed 20. Result always: [ 1, 3, 7, 5, 4, 6, 2 ]");
 console.log(shufflefy(numberArr, 10, 20));
 
 console.log("\nshuffle 10 times, starting seed irrelevant, customized randomizer ");
