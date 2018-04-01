@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/imp8468/shufflefy/issues"
   },
-  "homepage": "https://github.com/imp8468/shufflefy#readme"
+  "homepage": "https://github.com/imp8468/shufflefy#readme",
+  "keywords":["shuffle", "random", "pseudorandom", "array", "seed", "randomize"]
 }

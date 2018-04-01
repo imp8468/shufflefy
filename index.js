@@ -1,23 +1,18 @@
 function shufflefy(inputArr, iteration, starting_seed, randomizer){
 	const SHUFFLEFY_DEFALT_ITERATION = 1;
-	const SHUFFLEFY_DEFALT_RANDOMIZER = () => {
+	const SHUFFLEFY_DEFALT_RANDOMIZER = (seed) => {
 		if(typeof(seed) !== "number" || !seed)
 		{
 			seed = new Date().getTime();
 		}
-		seed = (seed * 9301 + 49297) % 233280;
-		var rnd = seed / 233280;
-
-		return rnd;
+		_shufflefy_seed = (seed * 9301 + 49297) % 233280;
+		return _shufflefy_seed / 233280;
 	};
 
 	if(!(inputArr instanceof Array))
 	{
 		throw "Expecting Array, getting " + typeof(inputArr);
 	}
-
-	let	outputArr;
-	let seed = starting_seed;
 
 	if(typeof(iteration) !== "number" || !iteration)
 	{
@@ -29,17 +24,19 @@ function shufflefy(inputArr, iteration, starting_seed, randomizer){
 		randomizer = SHUFFLEFY_DEFALT_RANDOMIZER;
 	}
 
+  let _shufflefy_seed = starting_seed;
+	let	_shufflefy_outputArr;
 
 	for(let i = 0; i < iteration; i++)
 	{	
-		outputArr=[];
+		_shufflefy_outputArr=[];
 		inputArr.forEach((obj) => {
-			outputArr.splice(Math.round(randomizer() * outputArr.length), 0, obj);
+			_shufflefy_outputArr.splice(Math.round(randomizer(_shufflefy_seed) * _shufflefy_outputArr.length), 0, obj);
 		});
-		inputArr = outputArr;
+		inputArr = _shufflefy_outputArr;
 	}
 
-	return outputArr;
+	return _shufflefy_outputArr;
 }
 
 module.exports = shufflefy;

@@ -22,9 +22,9 @@ Arguments:
 
 + iteration - the times you would want the input array to be shuffled
 
-+ starting_seed - to generate psudo random number, same starting_seed and iteration combination always generates same result
++ starting_seed - to generate pseudorandom number, same starting_seed and iteration combination always generates same result
 
-+ randomnizer - customize your randomizer, should be function that returns number in range [0,1]
++ randomnizer - customized randomizer - function that returns number in range [0,1]
 
 And check out example.js
 
