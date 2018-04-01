@@ -8,21 +8,23 @@ Install the package using npm:
     npm install shufflefy
 
 Require the package:
-
-	const shufflefy = require('shufflefy');
+```js
+const shufflefy = require('shufflefy');
+```
 
 Feed it with an array:
-
-	const numberArr=[1,2,3,4,5,6,7];
-	console.log(shufflefy(numberArr));
+```js
+const numberArr=[1,2,3,4,5,6,7];
+console.log(shufflefy(numberArr));
+```
 
 Arguments list:
-
-	shufflefy(inputArr, iteration, starting_seed, randomizer)
-
+```js
+shufflefy(inputArr, iteration, starting_seed, randomizer)
+```
 + inputArr - input array
 
-+ iteration - shufflefy can iterate over the output array
++ iteration - number of iterations over the output array
 
 + starting_seed - same starting_seed and iteration combination would always generate the same result
 
