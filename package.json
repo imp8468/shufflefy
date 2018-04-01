@@ -1,6 +1,6 @@
 {
   "name": "shufflefy",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "To shuffle an Array.",
   "main": "index.js",
   "scripts": {
