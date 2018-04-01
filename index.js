@@ -3,7 +3,7 @@ function shufflefy(inputArr, iteration, starting_seed, randomizer){
 	const SHUFFLEFY_DEFALT_RANDOMIZER = (seed) => {
 		if(typeof(seed) !== "number" || !seed)
 		{
-			seed = new Date().getTime();
+			seed = Date.now();
 		}
 		_shufflefy_seed = (seed * 9301 + 49297) % 233280;
 		return _shufflefy_seed / 233280;
@@ -31,7 +31,7 @@ function shufflefy(inputArr, iteration, starting_seed, randomizer){
 	{	
 		_shufflefy_outputArr=[];
 		inputArr.forEach((obj) => {
-			_shufflefy_outputArr.splice(Math.round(randomizer(_shufflefy_seed) * _shufflefy_outputArr.length), 0, obj);
+			_shufflefy_outputArr.splice(Math.floor(randomizer(_shufflefy_seed) * (_shufflefy_outputArr.length+1)), 0, obj);
 		});
 		inputArr = _shufflefy_outputArr;
 	}
