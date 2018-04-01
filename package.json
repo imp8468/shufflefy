@@ -1,6 +1,6 @@
 {
   "name": "shufflefy",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "To shuffle an Array.",
   "main": "index.js",
   "scripts": {
@@ -16,5 +16,12 @@
     "url": "https://github.com/imp8468/shufflefy/issues"
   },
   "homepage": "https://github.com/imp8468/shufflefy#readme",
-  "keywords":["shuffle", "random", "pseudorandom", "array", "seed", "randomize"]
+  "keywords": [
+    "shuffle",
+    "random",
+    "pseudorandom",
+    "array",
+    "seed",
+    "randomize"
+  ]
 }
