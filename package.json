@@ -23,5 +23,8 @@
     "array",
     "seed",
     "randomize"
-  ]
+  ],
+  "devDependencies": {
+    "jest": "^22.4.3"
+  }
 }
