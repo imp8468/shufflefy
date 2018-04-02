@@ -1,4 +1,6 @@
-# shufflefy
+[![Build Status](https://travis-ci.org/imp8468/shufflefy.svg?branch=master)](https://travis-ci.org/imp8468/shufflefy) ![license](https://img.shields.io/github/license/mashape/apistatus.svg)
+
+# shufflefy 
 A Node.js package to shuffle an array. 
 
 ## Usage
