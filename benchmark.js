@@ -1,27 +1,27 @@
 const shufflefy = require('./index');
-const inputArr=[1,2,3,4];
+const inputArr = [1,2,3];
 
 const sample = 1000000;
-const startTime= Date.now();
-let dict= {};
+const startTime = Date.now();
+let dict = {};
 
-for(let i = 0; i<sample; i++){
+for(let i = 0; i < sample; i++){
 	let result = shufflefy(inputArr);
 
 	if(result.toString() in dict)
 	{
-		dict[result.toString()] +=1;
+		dict[result.toString()] += 1;
 	}else
 	{
-		dict[result.toString()] =1;
+		dict[result.toString()] = 1;
 	}
 }
 const elapsed = Date.now() - startTime;
 
 const arrUtil = {	
 	sum: function(array) {
-		var num = 0;
-		for (var i = 0, l = array.length; i < l; i++) num += array[i];
+		let num = 0;
+		for (let i = 0, l = array.length; i < l; i++) num += array[i];
 			return num;
 	},
 	
@@ -30,7 +30,7 @@ const arrUtil = {
 	},
 	
 	variance: function(array) {
-		var mean = arrUtil.mean(array);
+		let mean = arrUtil.mean(array);
 		return arrUtil.mean(array.map(function(num) {
 			return Math.pow(num - mean, 2);
 		}));
@@ -41,15 +41,15 @@ const arrUtil = {
 	},
 };
 
-let stsArr=[];
+let stsArr = [];
 
-for (var key in dict) {
+for (let key in dict) {
 	stsArr.push(dict[key]/sample*100);
 	console.log(key +": "+ dict[key] +"; "+ (dict[key]/sample*100).toString()+"%");
 }
 
-console.log("Sample:\t\t\t"+sample);
-console.log("mean:\t\t\t"+arrUtil.mean(stsArr)+"%");
-console.log("variance:\t\t"+arrUtil.variance(stsArr));
-console.log("standardDeviation:\t"+arrUtil.standardDeviation(stsArr));
+console.log("Samples:\t\t"+sample);
+console.log("Mean:\t\t\t"+arrUtil.mean(stsArr)+"%");
+console.log("Variance:\t\t"+arrUtil.variance(stsArr));
+console.log("Standard Deviation:\t"+arrUtil.standardDeviation(stsArr));
 console.log("Time elapsed:\t\t"+elapsed+"ms")

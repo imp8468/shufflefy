@@ -29,9 +29,9 @@ function shufflefy(inputArr, iteration, starting_seed, randomizer){
 
 	for(let i = 0; i < iteration; i++)
 	{	
-		_shufflefy_outputArr=[];
+		_shufflefy_outputArr = [];
 		inputArr.forEach((obj) => {
-			_shufflefy_outputArr.splice(Math.floor(randomizer(_shufflefy_seed) * (_shufflefy_outputArr.length+1)), 0, obj);
+			_shufflefy_outputArr.splice(Math.floor(randomizer(_shufflefy_seed) * (_shufflefy_outputArr.length + 1)), 0, obj);
 		});
 		inputArr = _shufflefy_outputArr;
 	}
