@@ -1,6 +1,21 @@
 jest.dontMock("../index.js");
 const inputArr = [1, 2, 3, 4, 5, 6, 7]
 
+describe("Input should be array", () => {
+	it("If input is not array then throw", () => {
+		const shufflefy = require("../index.js");
+		expect(() => shufflefy("string")).toThrow();
+	})
+});
+
+describe("Input should be array", () => {
+	it("If input is empty array then return empty array", () => {
+		const shufflefy = require("../index.js");
+		const output = shufflefy([]);
+		expect(output).toEqual([]);
+	})
+});
+
 describe("Output should have the same size to input", () => {
 	it("Should be equal in length", () => {
 		const shufflefy = require("../index.js");

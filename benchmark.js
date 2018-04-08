@@ -7,7 +7,6 @@ let dict = {};
 
 for(let i = 0; i < sample; i++){
 	let result = shufflefy(inputArr);
-
 	if(result.toString() in dict)
 	{
 		dict[result.toString()] += 1;
