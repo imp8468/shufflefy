@@ -20,7 +20,7 @@ function shufflefy(inputArr, iteration, starting_seed, randomizer){
 		iteration = _SHUFFLEFY_DEFALT_ITERATION;
 	}
 
-	if(typeof randomizer !== "function" || typeof randomizer()  !== "number")
+	if(typeof randomizer !== "function" || typeof randomizer() !== "number")
 	{
 		randomizer = _SHUFFLEFY_DEFALT_RANDOMIZER;
 	}
