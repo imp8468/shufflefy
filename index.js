@@ -6,7 +6,7 @@ function shufflefy(input_arr, iteration, starting_seed, randomizer){
 
 	const _SHUFFLEFY_DEFAULT_ITERATION = 1;
 	const _SHUFFLEFY_DEFAULT_RANDOMIZER = (seed) => {
-		if(typeof(seed) !== "number" || !seed)
+		if(typeof seed !== "number" || !seed)
 		{
 			seed = process.hrtime()[1];
 		}
@@ -30,7 +30,7 @@ function shufflefy(input_arr, iteration, starting_seed, randomizer){
 
 	while(iteration)
 	{	
-		let	_shufflefy_range = _shufflefy_source_len;
+		let _shufflefy_range = _shufflefy_source_len;
 		let _shufflefy_source = _shufflefy_target;
 		_shufflefy_target = new Array(_shufflefy_source_len);
 

@@ -25,10 +25,10 @@ console.log(shufflefy(numberArr));
 Arguments list:
 
 ```js
-shufflefy(inputArr[, iteration, starting_seed, randomizer])
+shufflefy(input_arr[, iteration[, starting_seed[, randomizer]]])
 ```
 
-+ inputArr - input array
++ input_arr - input array
 
 + iteration - number of iterations over the output array
 
@@ -40,13 +40,13 @@ Test:
 
     npm test
 
-Check example:
+Examples:
 
-	node example
+	node example.js
 
-Run benchmarking:
+Benchmarking:
 
-	node benchmark
+	node benchmark.js
 
 ## License
 
